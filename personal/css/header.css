@@ -1,0 +1,236 @@
+#footout {
+    background: #f7f7f7;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    min-width: 1200px;
+}
+#footout .topline {
+    background: url("../Images/foot.png") center 0 no-repeat #337fab;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+#footinner{
+    width:1200px;
+    margin:0 auto;
+    padding-top: 40px;
+    font-size: 13px;
+    display:block;
+    overflow:hidden;
+}
+#footinner .footlogo{
+    width:200px;
+}
+#footinner .footlogo,#footinner .footmap{
+    position:relative;
+    display:inline;
+    min-height: 157px;
+    float: left;
+}
+.footlogo dl{
+    padding:0 20px;
+}
+.footlogo dt{padding-bottom: 10px;}
+.footlogo dt a{
+    background:url("../Images/head.png") no-repeat;
+    width:136px;
+    height:44px;
+    display:block;
+    line-height: 0;
+    font-size: 0;
+    overflow:hidden;
+}
+.footlogo dd{
+    line-height:23px;
+}
+#footinner dd .ff{
+    margin-left:30px;
+}
+#footinner dd a{text-decoration:none;}
+.footlogo dd a:hover{color:#1e7dd7;}
+#footinner .line{
+    background:url("../Images/foot.png") -495px -9px no-repeat;
+    width:1px;
+    height:157px;
+    font-weight: bold;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#footinner .footmap {
+    width: 501px;
+}
+.footmap dl{
+    float: left;
+    display: inline;
+    margin-left: 55px;
+    line-height: 30px;
+}
+.footmap dd{
+    font-size: 16px;
+    line-height: 30px;
+}
+.footmap .sina, .footmap .weixin, .footmap .rss {
+    background:url("../Images/foot.png") -140px -9px no-repeat;
+    width: 30px;
+    height: 30px;
+    display:block;
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    margin-top: 8px;
+}
+.footmap .weixin{
+    background-position:-170px -9px;
+}
+.footmap .rss{
+    background-position:-200px -9px;
+}
+.fotmap .line {
+    background: url("../Images/foot.png") -495px -9px no-repeat;
+    width: 1px;
+    height: 157px;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#footinner .footweek {
+    width: 280px;
+    float: left;
+    display: inline;
+    min-height: 157px;
+}
+.footweek dl {
+    width: 172px;
+    margin: 0 auto;
+}
+.fix{display:block;}
+.footweek dt span {
+    color: #7d7d7d;
+    padding-top: 3px;
+}
+.fr {
+    float: right;
+}
+.footweek dt strong{
+    font-size: 18px;
+    font-weight: 400;
+}
+.footweek dd {
+    margin-top: 10px;
+}
+.footweek img {
+    border: 1px solid #ccc;
+}
+img {
+    background: url("../Images/autoimg.png") center no-repeat #f2f2f2;
+    background-size: 50% auto;
+    vertical-align: middle;
+}
+.footweek .input {
+    background: url("../Images/foot.png") -330px -34px no-repeat;
+    width: 172px;
+    height: 25px;
+    position: relative;
+    padding-top: 2px;
+}
+.footweek .input input {
+    background: 0 0;
+    width: 90px;
+    margin-left: 12px;
+    border: none;
+    height: 22px;
+}
+.ca5 {
+    color: #a5a5a5;
+}
+input{
+    font-family: "Î¢ÈíÑÅºÚ","microsoft yahei";
+    font-size: 12px;
+    padding: 2px;
+    vertical-align: middle;
+    outline: 0;
+}
+.input .btnlanlan{
+    background: url("../Images/foot.png") -330px -9px no-repeat;
+    width: 55px;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    top: 1px;
+    text-align: center;
+    color: #fff;
+    line-height: 25px;
+}
+/********************ÓÒ²à¶þÎ¬Âë***********************/
+.saoma{
+    width:205px;
+    min-height:157px;
+    display:inline;
+    float:left;  /***°Ú·Å¶þÎ¬ÂëµÄÎ»ÖÃ*****/
+    text-align: center;
+}
+.saoma dt{
+    color:#7d7d7d;
+}
+.saoma dt strong{
+    font-size:18px;
+    color:#333;
+    font-weight:400;
+    line-height:10px;
+}
+.saoma dd{margin-top:12px;}
+.saoma .erweima{
+    background:url("../Images/foot.png") -795px -9px no-repeat;
+    width:96px;
+    height:96px;
+    margin:0 auto;
+    display:block;
+}
+/*****************½Å±¾**************/
+.footer{
+    text-align: center;
+    font-family: Verdana;
+    padding: 30px 0 20px;
+    line-height: 2em;
+    font-size: 12px;
+}
+.footer span,.footer a{margin:0 6px;}
+.footer a{text-decoration: none;}
+.foot .beian_container{
+    diaplay:inline-block;
+    text-decoration: none;
+}
+.footer .maozi{
+    background:url("../Images/foot.png") -233px -12px no-repeat;
+    width:20px;
+    height:20px;
+    display:inline-block;
+    margin:0!important;
+}
+.yejiao{
+    text-align: center;
+    padding-top:12px;
+}
+.yejiao a.quanwei{
+    background-position:0 -60px;
+}
+.yejiao a{
+    display:inline-block;
+    position:relative;
+    vertical-align: middle;
+    margin-right: 15px;
+    overflow: hidden;
+}
+.credible .shangbiao {
+    width: 68px;
+    height: 25px;
+}

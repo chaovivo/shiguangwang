@@ -1,0 +1,137 @@
+//获取按钮绑定事件
+btn1.onclick=function(){
+	var n=uname.value;
+	var p=upwd.value;
+	var xhr=new XMLHttpRequest();
+	xhr.onreadystatechange=function(){
+		if(xhr.readyState===4&&xhr.status===200){
+		   var num=xhr.responseText;
+		   if(num>0){
+			   alert("注册成功");
+		   }else{
+			   alert("注册失败");
+		   }
+		}
+	}
+	xhr.open('GET','data/register.php?uname='+n+'&upwd='+p,true);
+	xhr.send(null); 
+} 
+
+
+///登录验证
+//获得id为form的表单
+var form=document.getElementById("f1");
+//文本框绑定获得焦点事件
+var list1=form.uname;
+ var list2=form.upwd;
+ var list3=form.btn1;
+  list1.onfocus=getFocus;
+  list2.onfocus=getFocus;
+  //验证登录账号
+list1.onblur=function(){
+	if(vali(this,/^[0-9A-Za-z]{5,11}$/i)){
+	this.style.border="1px solid #000";
+	}else{
+	this.style.border="1px solid red";
+	};
+}
+//登录密码验证
+list2.onblur=function(){
+  if(vali(this,/^[0-9A-Za-z]{6,20}$/)){
+   this.style.border="1px solid #000";
+  }else{
+    this.style.border="1px solid red";
+  };
+}
+
+function vali(txt,reg){
+	txt.innerHTML="";
+	if(reg.test(txt.value)){
+		txt.nextElementSibling.style.display="none"; 
+		return true;
+	}else{
+		txt.nextElementSibling.style.display="block";
+		return false;
+	}
+}
+
+//input获得焦点
+function getFocus(){
+	this.style.border="1px solid #000";
+}
+
+
+
+
+
+
+
+
+
+
+var from=document.forms[0],
+    txtPwd=from.upwd,
+    txtPhone=from.phones,
+    checkbox=$('#check')[0],
+    $code=$('#aa')[0],
+    $reg=$('.dd'),
+    p=[],t=0;
+    //验证码
+var pool=function(){
+    var cw = 80;   //画布的总宽度
+    var ch = 30;   //画布的总高度
+    p=[];
+    c9.width = cw;
+    c9.height = ch;
+    var ctx = c9.getContext('2d');
+    /**1.绘制背景颜色——填充矩形**/
+    ctx.fillStyle = rc(100, 255);
+    ctx.fillRect(0, 0, cw, ch);
+    /**2.循环绘制4个随机字符**/
+    ctx.textBaseline = 'top';
+    var pol = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ3456789';
+    for (var i = 0; i < 4; i++) {
+        var c = pol[rn(0, pol.length)];//一个随机字符
+        var fs = rn(20, 30); //字体大小
+        ctx.font = fs + 'px  SimHei';
+        var fc = rc(50, 150); //字体颜色
+        ctx.strokeStyle = fc;
+        var deg = rn(-15, 35);//旋转角度
+        var x = -fs / 2;      //每个字符左上角的坐标
+        var y = -fs / 2;
+        //绘制一个字符: 保存状态->平移->旋转->绘制->恢复状态
+        ctx.save();
+        ctx.translate(20*i+15, 15);
+        ctx.rotate(deg*Math.PI/180);
+        ctx.strokeText(c, x, y);
+        ctx.restore();
+        p.push(c);
+
+    }
+    /**3.绘制5条干扰线——直线路径**/
+    for(var i=0; i<5; i++){
+        ctx.beginPath();
+        ctx.moveTo(rn(0,cw), rn(0, ch));
+        ctx.lineTo(rn(0,cw), rn(0, ch));
+        ctx.strokeStyle = rc(0, 255);
+        ctx.stroke();
+    }
+//random number，返回指定范围内的随机整数
+    function rn(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+//random color，返回指定范围内的随机颜色
+    function rc(min, max) {
+        var r = rn(min, max);
+        var g = rn(min, max);
+        var b = rn(min, max);
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+    return p;
+};
+//调用一次验证码
+pool();
+//点击刷新验证码
+$reg.on('click',function(){
+    pool();
+});
